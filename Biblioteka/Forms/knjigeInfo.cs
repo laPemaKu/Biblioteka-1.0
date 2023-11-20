@@ -12,24 +12,31 @@ namespace Biblioteka
 {
     public partial class knjigeInfo : childForm
     {
-        public knjigeInfo()
+        List<knjiga> knjige_list = new List<knjiga>();
+        internal List<knjiga> Knjige_list { get => knjige_list; set => knjige_list = value; }
+        public int Isbn1 { get => Isbn; set => Isbn = value; }
+
+        int Isbn;
+        public knjigeInfo(int isbn)
         {
             InitializeComponent();
-            try
+            this.Isbn = isbn;
+        }
+
+        private void knjigeInfo_Load(object sender, EventArgs e)
+        {
+            foreach(knjiga knjiga in knjige_list)
             {
-                int broj_knjiga = Convert.ToInt32(txtBrojKnjiga.Text);
-                if (broj_knjiga < 0)
-                {
-                    btnPodizanjeKnjige.Visible = true;
-                }
-                else
-                {
-                    btnPodizanjeKnjige.Visible = false;
+                if (knjiga.Isbn ==Isbn) {
+                    txtNaziv.Text = knjiga.Naziv;
+                    txtIzdavac.Text = knjiga.Izdavac;
+                    txtGodinaIzdavanja.Text = knjiga.Godina_izdavanja + "";
+                    txtPisac.Text = knjiga.Pisac;
+                    txtBrojKnjiga.Text = knjiga.Broj_kopija + "";
+                    txtISBN.Text = knjiga.Isbn + "";
+                    break;
                 }
             }
-            catch (Exception ex)
-            { }
-                
         }
     }
 }

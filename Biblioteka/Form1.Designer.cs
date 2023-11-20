@@ -32,6 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnPretrazi = new System.Windows.Forms.Button();
             this.pnlForm = new System.Windows.Forms.Panel();
+            this.btnSpremi = new System.Windows.Forms.Button();
+            this.btnUcitaj = new System.Windows.Forms.Button();
+            this.btnStvori = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtISBN
@@ -52,7 +55,7 @@
             // 
             // btnPretrazi
             // 
-            this.btnPretrazi.Location = new System.Drawing.Point(237, 37);
+            this.btnPretrazi.Location = new System.Drawing.Point(212, 37);
             this.btnPretrazi.Name = "btnPretrazi";
             this.btnPretrazi.Size = new System.Drawing.Size(75, 23);
             this.btnPretrazi.TabIndex = 2;
@@ -67,11 +70,44 @@
             this.pnlForm.Size = new System.Drawing.Size(746, 486);
             this.pnlForm.TabIndex = 3;
             // 
+            // btnSpremi
+            // 
+            this.btnSpremi.Location = new System.Drawing.Point(607, 37);
+            this.btnSpremi.Name = "btnSpremi";
+            this.btnSpremi.Size = new System.Drawing.Size(75, 23);
+            this.btnSpremi.TabIndex = 4;
+            this.btnSpremi.Text = "Spremi";
+            this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
+            // 
+            // btnUcitaj
+            // 
+            this.btnUcitaj.Location = new System.Drawing.Point(688, 38);
+            this.btnUcitaj.Name = "btnUcitaj";
+            this.btnUcitaj.Size = new System.Drawing.Size(75, 23);
+            this.btnUcitaj.TabIndex = 5;
+            this.btnUcitaj.Text = "Učitaj";
+            this.btnUcitaj.UseVisualStyleBackColor = true;
+            this.btnUcitaj.Click += new System.EventHandler(this.btnUcitaj_Click);
+            // 
+            // btnStvori
+            // 
+            this.btnStvori.Location = new System.Drawing.Point(306, 37);
+            this.btnStvori.Name = "btnStvori";
+            this.btnStvori.Size = new System.Drawing.Size(75, 23);
+            this.btnStvori.TabIndex = 6;
+            this.btnStvori.Text = "Stvori";
+            this.btnStvori.UseVisualStyleBackColor = true;
+            this.btnStvori.Click += new System.EventHandler(this.btnStvori_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 613);
+            this.Controls.Add(this.btnStvori);
+            this.Controls.Add(this.btnUcitaj);
+            this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.btnPretrazi);
             this.Controls.Add(this.label1);
@@ -89,6 +125,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPretrazi;
         private System.Windows.Forms.Panel pnlForm;
+        private System.Windows.Forms.Button btnSpremi;
+        private System.Windows.Forms.Button btnUcitaj;
+        private System.Windows.Forms.Button btnStvori;
     }
 }
 

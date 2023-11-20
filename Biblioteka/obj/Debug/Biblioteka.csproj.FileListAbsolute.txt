@@ -12,3 +12,4 @@ C:\Users\Ucenik\Documents\Iva\Biblioteka\obj\Debug\Biblioteka.pdb
 C:\Users\Ucenik\Documents\Iva\Biblioteka\obj\Debug\Biblioteka.childForm.resources
 C:\Users\Ucenik\Documents\Iva\Biblioteka\obj\Debug\Biblioteka.knjigeInfo.resources
 C:\Users\Ucenik\Documents\Iva\Biblioteka\obj\Debug\Biblioteka.podizanjeKnjige.resources
+C:\Users\Ucenik\Documents\Iva\Biblioteka\obj\Debug\Biblioteka.StvoriKnjigu.resources
