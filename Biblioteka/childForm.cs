@@ -18,6 +18,11 @@ namespace Biblioteka
             this.Size = new System.Drawing.Size(746, 486);
         }
 
+        private void closing(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -15,6 +15,7 @@ namespace Biblioteka
     public partial class Form1 : Form
     {
         public Panel panel;
+        
         public Form1()
         {
             InitializeComponent();
@@ -22,6 +23,8 @@ namespace Biblioteka
             
         }
         List<knjiga> knjige_list = new List<knjiga>();
+        List<knjiga> knjige_;
+        StvoriKnjigu forma_stvori = new StvoriKnjigu();
         public void openForm(childForm childForm)
         {
             panel.Controls.Clear();
@@ -44,8 +47,20 @@ namespace Biblioteka
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
+            this.GettingCreatedObjects(forma_stvori);
+            List<knjiga> knjige_main = new List<knjiga>();
+            foreach(knjiga knj in knjige_list)
+            {
+                knjige_main.Add(knj);
+            }
+            foreach (knjiga knj in knjige_)
+            {
+                knjige_main.Add(knj);
+            }
+            txtKnj.Visible = true;
+            
             XDocument xml = new XDocument(new XElement("Knjiga",
-                from knjiga in knjige_list
+                from knjiga in knjige_main
                 select new XElement("Knjiga",
                 new XAttribute("Naziv", knjiga.Naziv),
                 new XAttribute("ISBN", knjiga.Isbn),
@@ -80,7 +95,11 @@ namespace Biblioteka
                     XDocument xml = XDocument.Load(reader);
                     foreach(XElement element in xml.Elements())
                     {
-                        knjiga knjiga = new knjiga(element.Attribute("Naziv").Value, Convert.ToInt32(element.Attribute("ISBN").Value), Convert.ToInt32(element.Attribute("Godina_izdavanja").Value), Convert.ToInt32(element.Attribute("Broj_kopija").Value), element.Attribute("Pisac").Value, element.Attribute("Izdavac").Value);
+                        try
+                        {
+                            knjiga knjiga = new knjiga(element.Attribute("Naziv").Value, Convert.ToInt32(element.Attribute("ISBN").Value), Convert.ToInt32(element.Attribute("Godina_izdavanja").Value), Convert.ToInt32(element.Attribute("Broj_kopija").Value), element.Attribute("Pisac").Value, element.Attribute("Izdavac").Value);
+                        }
+                        catch { } 
                     }
                 }
             }
@@ -88,7 +107,14 @@ namespace Biblioteka
 
         private void btnStvori_Click(object sender, EventArgs e)
         {
-            openForm(new StvoriKnjigu());
+            openForm(new StvoriKnjigu(this));
+            
+        }
+
+        public void GettingCreatedObjects(StvoriKnjigu form)
+        {
+            knjige_ = form.Knjige_list;
+            forma_stvori = form;
         }
     }
 }

@@ -27,5 +27,7 @@ namespace Biblioteka
         public int Broj_kopija { get => broj_kopija; set => broj_kopija = value; }
         public string Pisac { get => pisac; set => pisac = value; }
         public string Izdavac { get => izdavac; set => izdavac = value; }
+
+
     }
 }

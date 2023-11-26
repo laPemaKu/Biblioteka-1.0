@@ -14,14 +14,21 @@ namespace Biblioteka
     {
         public StvoriKnjigu()
         {
+            
+        }
+        Form1 forma = new Form1();
+        public StvoriKnjigu(Form1 form)
+        {
             InitializeComponent();
+            forma = form;
         }
 
         private void StvoriKnjigu_Load(object sender, EventArgs e)
         {
 
         }
-
+        List<knjiga> knjige_list = new List<knjiga>();
+        internal List<knjiga> Knjige_list { get => knjige_list; set => knjige_list = value; }
         private void btnSpremi_Click(object sender, EventArgs e)
         {
             string naziv = txtNaziv.Text, pisac = txtPisac.Text, izdavac = txtIzdavac.Text;
@@ -34,5 +41,12 @@ namespace Biblioteka
             txtNaziv.Clear();
             txtPisac.Clear();
         }
+         
+        private void CloseForm()
+        {
+            forma.GettingCreatedObjects(this);
+        }
     }
+
+    
 }
