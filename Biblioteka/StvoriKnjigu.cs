@@ -16,11 +16,11 @@ namespace Biblioteka
         {
             
         }
-        Form1 forma = new Form1();
+        static Form1 main = new Form1();
         public StvoriKnjigu(Form1 form)
         {
             InitializeComponent();
-            forma = form;
+            main = form;
         }
 
         private void StvoriKnjigu_Load(object sender, EventArgs e)
@@ -40,11 +40,12 @@ namespace Biblioteka
             txtIzdavac.Clear();
             txtNaziv.Clear();
             txtPisac.Clear();
+            knjige_list.Add(knjiga);
         }
          
         private void CloseForm()
         {
-            forma.GettingCreatedObjects(this);
+            main.GettingCreatedObjects(this);
         }
     }
 

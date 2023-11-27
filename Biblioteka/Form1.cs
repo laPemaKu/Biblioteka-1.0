@@ -1,30 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
-using System.IO;
 
 namespace Biblioteka
 {
     public partial class Form1 : Form
     {
         public Panel panel;
-        
+
         public Form1()
         {
             InitializeComponent();
             panel = pnlForm;
-            
+
         }
         List<knjiga> knjige_list = new List<knjiga>();
         List<knjiga> knjige_;
-        StvoriKnjigu forma_stvori = new StvoriKnjigu();
+        internal List<knjiga> knjige_main = new List<knjiga>();
+        private StvoriKnjigu forma_stvori = new StvoriKnjigu();
         public void openForm(childForm childForm)
         {
             panel.Controls.Clear();
@@ -38,37 +35,39 @@ namespace Biblioteka
 
         private void btnPretrazi_Click(object sender, EventArgs e)
         {
-            try {
-                knjigeInfo Knjigeinfo = new knjigeInfo(Convert.ToInt32(txtISBN.Text));
-                Knjigeinfo.Knjige_list = knjige_list;
+            try
+            {
+                int isbn = Convert.ToInt32(txtISBN.Text);
+                knjige_main = this.SyncLists();
+                knjigeInfo Knjigeinfo = new knjigeInfo(this);
                 openForm(Knjigeinfo);
-            } catch (Exception ex) {}
+                Knjigeinfo.Pretrazi(isbn);
+                txtISBN.Clear();
+            }
+            catch { }
         }
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
             this.GettingCreatedObjects(forma_stvori);
-            List<knjiga> knjige_main = new List<knjiga>();
-            foreach(knjiga knj in knjige_list)
-            {
-                knjige_main.Add(knj);
-            }
-            foreach (knjiga knj in knjige_)
-            {
-                knjige_main.Add(knj);
-            }
+            knjige_main = this.SyncLists();
+
             txtKnj.Visible = true;
-            
+            foreach (knjiga knj in knjige_main)
+            {
+                txtKnj.AppendText(knj.Naziv);
+            }
+
             XDocument xml = new XDocument(new XElement("Knjiga",
-                from knjiga in knjige_main
-                select new XElement("Knjiga",
-                new XAttribute("Naziv", knjiga.Naziv),
-                new XAttribute("ISBN", knjiga.Isbn),
-                new XAttribute("Pisac",knjiga.Pisac),
-                new XAttribute("Izdavac", knjiga.Izdavac),
-                new XAttribute("Godina_izdavanja", knjiga.Godina_izdavanja),
-                new XAttribute("Broj_kopija", knjiga.Broj_kopija)
-                )));
+            from knjiga in knjige_main
+            select new XElement("Knjiga",
+            new XAttribute("Naziv", knjiga.Naziv),
+            new XAttribute("ISBN", knjiga.Isbn),
+            new XAttribute("Pisac", knjiga.Pisac),
+            new XAttribute("Izdavac", knjiga.Izdavac),
+            new XAttribute("Godina_izdavanja", knjiga.Godina_izdavanja),
+            new XAttribute("Broj_kopija", knjiga.Broj_kopija)
+            )));
 
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Xml files (*.xml)|*.xml";
@@ -81,7 +80,7 @@ namespace Biblioteka
                 {
                     writer.WriteLine(xml.ToString());
                 }
-               
+
             }
         }
 
@@ -92,14 +91,15 @@ namespace Biblioteka
             {
                 using (StreamReader reader = new StreamReader(openFileDialog.FileName))
                 {
-                    XDocument xml = XDocument.Load(reader);
-                    foreach(XElement element in xml.Elements())
+                    XElement xml = XElement.Load(reader);
+                    foreach (XElement element in xml.Elements())
                     {
                         try
                         {
-                            knjiga knjiga = new knjiga(element.Attribute("Naziv").Value, Convert.ToInt32(element.Attribute("ISBN").Value), Convert.ToInt32(element.Attribute("Godina_izdavanja").Value), Convert.ToInt32(element.Attribute("Broj_kopija").Value), element.Attribute("Pisac").Value, element.Attribute("Izdavac").Value);
+                            knjiga knj = new knjiga(element.Attribute("Naziv").Value, Convert.ToInt32(element.Attribute("ISBN").Value), Convert.ToInt32(element.Attribute("Godina_izdavanja").Value), Convert.ToInt32(element.Attribute("Broj_kopija").Value), element.Attribute("Pisac").Value, element.Attribute("Izdavac").Value);
+                            knjige_.Add(knj);
                         }
-                        catch { } 
+                        catch { }
                     }
                 }
             }
@@ -107,14 +107,31 @@ namespace Biblioteka
 
         private void btnStvori_Click(object sender, EventArgs e)
         {
-            openForm(new StvoriKnjigu(this));
-            
+            forma_stvori = new StvoriKnjigu(this);
+            openForm(forma_stvori);
+
         }
 
         public void GettingCreatedObjects(StvoriKnjigu form)
         {
             knjige_ = form.Knjige_list;
             forma_stvori = form;
+            foreach (knjiga knj in form.Knjige_list)
+            {
+                txtKnj.AppendText(knj.Naziv);
+            }
+        }
+        private List<knjiga> SyncLists()
+        {
+            List<knjiga> knjige_main = new List<knjiga>();
+            this.GettingCreatedObjects(forma_stvori);
+
+            foreach (knjiga knj in knjige_)
+            {
+                knjige_main.Add(knj);
+            }
+
+            return knjige_main;
         }
     }
 }

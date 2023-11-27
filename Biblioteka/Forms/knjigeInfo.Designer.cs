@@ -42,6 +42,7 @@
             this.txtBrojKnjiga = new System.Windows.Forms.TextBox();
             this.btnPodizanjeKnjige = new System.Windows.Forms.Button();
             this.btnVracanjeKnjige = new System.Windows.Forms.Button();
+            this.txtKnj = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtISBN
@@ -167,11 +168,20 @@
             this.btnVracanjeKnjige.Text = "Vraćanje Knjige";
             this.btnVracanjeKnjige.UseVisualStyleBackColor = true;
             // 
+            // txtKnj
+            // 
+            this.txtKnj.Location = new System.Drawing.Point(41, 309);
+            this.txtKnj.Multiline = true;
+            this.txtKnj.Name = "txtKnj";
+            this.txtKnj.Size = new System.Drawing.Size(179, 94);
+            this.txtKnj.TabIndex = 15;
+            // 
             // knjigeInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 447);
+            this.Controls.Add(this.txtKnj);
             this.Controls.Add(this.btnVracanjeKnjige);
             this.Controls.Add(this.btnPodizanjeKnjige);
             this.Controls.Add(this.label5);
@@ -203,6 +213,7 @@
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.btnPodizanjeKnjige, 0);
             this.Controls.SetChildIndex(this.btnVracanjeKnjige, 0);
+            this.Controls.SetChildIndex(this.txtKnj, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +235,6 @@
         private System.Windows.Forms.TextBox txtBrojKnjiga;
         private System.Windows.Forms.Button btnPodizanjeKnjige;
         private System.Windows.Forms.Button btnVracanjeKnjige;
+        private System.Windows.Forms.TextBox txtKnj;
     }
 }
