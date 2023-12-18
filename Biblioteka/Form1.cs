@@ -19,7 +19,7 @@ namespace Biblioteka
 
         }
         List<knjiga> knjige_list = new List<knjiga>();
-        List<knjiga> knjige_;
+        List<knjiga> knjige_ = new List<knjiga>();
         internal List<knjiga> knjige_main = new List<knjiga>();
         private StvoriKnjigu forma_stvori = new StvoriKnjigu();
         public void openForm(childForm childForm)
@@ -52,11 +52,6 @@ namespace Biblioteka
             this.GettingCreatedObjects(forma_stvori);
             knjige_main = this.SyncLists();
 
-            txtKnj.Visible = true;
-            foreach (knjiga knj in knjige_main)
-            {
-                txtKnj.AppendText(knj.Naziv);
-            }
 
             XDocument xml = new XDocument(new XElement("Knjiga",
             from knjiga in knjige_main
@@ -97,7 +92,7 @@ namespace Biblioteka
                         try
                         {
                             knjiga knj = new knjiga(element.Attribute("Naziv").Value, Convert.ToInt32(element.Attribute("ISBN").Value), Convert.ToInt32(element.Attribute("Godina_izdavanja").Value), Convert.ToInt32(element.Attribute("Broj_kopija").Value), element.Attribute("Pisac").Value, element.Attribute("Izdavac").Value);
-                            knjige_.Add(knj);
+                            knjige_list.Add(knj);
                         }
                         catch { }
                     }
@@ -127,6 +122,10 @@ namespace Biblioteka
             this.GettingCreatedObjects(forma_stvori);
 
             foreach (knjiga knj in knjige_)
+            {
+                knjige_main.Add(knj);
+            }
+            foreach (knjiga knj in knjige_list)
             {
                 knjige_main.Add(knj);
             }

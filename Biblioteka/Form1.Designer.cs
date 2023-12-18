@@ -103,10 +103,10 @@
             // 
             // txtKnj
             // 
-            this.txtKnj.Location = new System.Drawing.Point(395, 2);
+            this.txtKnj.Location = new System.Drawing.Point(396, 12);
             this.txtKnj.Multiline = true;
             this.txtKnj.Name = "txtKnj";
-            this.txtKnj.Size = new System.Drawing.Size(195, 84);
+            this.txtKnj.Size = new System.Drawing.Size(193, 62);
             this.txtKnj.TabIndex = 7;
             this.txtKnj.Visible = false;
             // 
