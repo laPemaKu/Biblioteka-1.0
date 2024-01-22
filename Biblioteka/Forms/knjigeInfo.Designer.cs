@@ -56,18 +56,22 @@
             // ISBN
             // 
             this.ISBN.AutoSize = true;
+            this.ISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ISBN.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.ISBN.Location = new System.Drawing.Point(50, 126);
             this.ISBN.Name = "ISBN";
-            this.ISBN.Size = new System.Drawing.Size(35, 13);
+            this.ISBN.Size = new System.Drawing.Size(40, 13);
             this.ISBN.TabIndex = 1;
             this.ISBN.Text = "ISBN:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(50, 185);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
+            this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Pisac:";
             // 
@@ -82,9 +86,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Location = new System.Drawing.Point(50, 247);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Izdavač:";
             // 
@@ -99,9 +105,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label3.Location = new System.Drawing.Point(343, 126);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 13);
+            this.label3.Size = new System.Drawing.Size(109, 13);
             this.label3.TabIndex = 8;
             this.label3.Text = "Godina izdavanja:";
             // 
@@ -116,10 +124,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.Location = new System.Drawing.Point(58, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 20);
+            this.label4.Size = new System.Drawing.Size(132, 24);
             this.label4.TabIndex = 10;
             this.label4.Text = "Naziv Knjige:";
             // 
@@ -135,9 +144,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label5.Location = new System.Drawing.Point(343, 185);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.Size = new System.Drawing.Size(71, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "Broj kopija:";
             // 
@@ -151,23 +162,31 @@
             // 
             // btnPodizanjeKnjige
             // 
+            this.btnPodizanjeKnjige.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnPodizanjeKnjige.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPodizanjeKnjige.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPodizanjeKnjige.ForeColor = System.Drawing.Color.White;
             this.btnPodizanjeKnjige.Location = new System.Drawing.Point(289, 265);
             this.btnPodizanjeKnjige.Name = "btnPodizanjeKnjige";
             this.btnPodizanjeKnjige.Size = new System.Drawing.Size(111, 23);
             this.btnPodizanjeKnjige.TabIndex = 13;
             this.btnPodizanjeKnjige.Text = "Podizanje knjige";
-            this.btnPodizanjeKnjige.UseVisualStyleBackColor = true;
+            this.btnPodizanjeKnjige.UseVisualStyleBackColor = false;
             this.btnPodizanjeKnjige.Visible = false;
             this.btnPodizanjeKnjige.Click += new System.EventHandler(this.btnPodizanjeKnjige_Click);
             // 
             // btnVracanjeKnjige
             // 
+            this.btnVracanjeKnjige.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnVracanjeKnjige.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVracanjeKnjige.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnVracanjeKnjige.ForeColor = System.Drawing.Color.White;
             this.btnVracanjeKnjige.Location = new System.Drawing.Point(466, 264);
             this.btnVracanjeKnjige.Name = "btnVracanjeKnjige";
             this.btnVracanjeKnjige.Size = new System.Drawing.Size(97, 23);
             this.btnVracanjeKnjige.TabIndex = 14;
             this.btnVracanjeKnjige.Text = "Vraćanje Knjige";
-            this.btnVracanjeKnjige.UseVisualStyleBackColor = true;
+            this.btnVracanjeKnjige.UseVisualStyleBackColor = false;
             // 
             // txtKnj
             // 

@@ -38,14 +38,17 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.calPocetno = new System.Windows.Forms.MonthCalendar();
             this.calZavrsno = new System.Windows.Forms.MonthCalendar();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Ime
             // 
             this.Ime.AutoSize = true;
+            this.Ime.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Ime.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.Ime.Location = new System.Drawing.Point(30, 62);
             this.Ime.Name = "Ime";
-            this.Ime.Size = new System.Drawing.Size(35, 13);
+            this.Ime.Size = new System.Drawing.Size(41, 13);
             this.Ime.TabIndex = 3;
             this.Ime.Text = "E-mail";
             // 
@@ -68,38 +71,50 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(78, 139);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Location = new System.Drawing.Point(30, 137);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 13);
+            this.label4.Size = new System.Drawing.Size(81, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Posuđivanje:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label5.Location = new System.Drawing.Point(249, 155);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 13);
+            this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "Do:";
             // 
             // btnPodigni
             // 
+            this.btnPodigni.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnPodigni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPodigni.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPodigni.ForeColor = System.Drawing.Color.White;
             this.btnPodigni.Location = new System.Drawing.Point(532, 369);
             this.btnPodigni.Name = "btnPodigni";
             this.btnPodigni.Size = new System.Drawing.Size(75, 23);
             this.btnPodigni.TabIndex = 15;
             this.btnPodigni.Text = "Podigni";
-            this.btnPodigni.UseVisualStyleBackColor = true;
+            this.btnPodigni.UseVisualStyleBackColor = false;
             // 
             // btnOdabir
             // 
+            this.btnOdabir.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnOdabir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOdabir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnOdabir.ForeColor = System.Drawing.Color.White;
             this.btnOdabir.Location = new System.Drawing.Point(210, 79);
             this.btnOdabir.Name = "btnOdabir";
             this.btnOdabir.Size = new System.Drawing.Size(106, 23);
             this.btnOdabir.TabIndex = 16;
             this.btnOdabir.Text = "Odabir knjiga";
-            this.btnOdabir.UseVisualStyleBackColor = true;
+            this.btnOdabir.UseVisualStyleBackColor = false;
             this.btnOdabir.Click += new System.EventHandler(this.btnOdabir_Click);
             // 
             // listView1
@@ -123,11 +138,23 @@
             this.calZavrsno.Name = "calZavrsno";
             this.calZavrsno.TabIndex = 19;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(18, 155);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Od:";
+            // 
             // podizanjeKnjige
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 447);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.calZavrsno);
             this.Controls.Add(this.calPocetno);
             this.Controls.Add(this.listView1);
@@ -150,6 +177,7 @@
             this.Controls.SetChildIndex(this.listView1, 0);
             this.Controls.SetChildIndex(this.calPocetno, 0);
             this.Controls.SetChildIndex(this.calZavrsno, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +195,6 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.MonthCalendar calPocetno;
         private System.Windows.Forms.MonthCalendar calZavrsno;
+        private System.Windows.Forms.Label label1;
     }
 }

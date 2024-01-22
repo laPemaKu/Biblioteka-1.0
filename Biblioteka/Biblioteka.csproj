@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountF.cs">
+    <Compile Include="Forms\AccountF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AccountF.Designer.cs">
+    <Compile Include="Forms\AccountF.Designer.cs">
       <DependentUpon>AccountF.cs</DependentUpon>
     </Compile>
     <Compile Include="childForm.cs">
@@ -77,10 +77,10 @@
     <Compile Include="Forms\podizanjeKnjige.Designer.cs">
       <DependentUpon>podizanjeKnjige.cs</DependentUpon>
     </Compile>
-    <Compile Include="KnjigaOdabir.cs">
+    <Compile Include="Forms\KnjigaOdabir.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KnjigaOdabir.Designer.cs">
+    <Compile Include="Forms\KnjigaOdabir.Designer.cs">
       <DependentUpon>KnjigaOdabir.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -91,7 +91,7 @@
     <Compile Include="Forms\StvoriKnjigu.Designer.cs">
       <DependentUpon>StvoriKnjigu.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AccountF.resx">
+    <EmbeddedResource Include="Forms\AccountF.resx">
       <DependentUpon>AccountF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="childForm.resx">
@@ -106,7 +106,7 @@
     <EmbeddedResource Include="Forms\podizanjeKnjige.resx">
       <DependentUpon>podizanjeKnjige.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KnjigaOdabir.resx">
+    <EmbeddedResource Include="Forms\KnjigaOdabir.resx">
       <DependentUpon>KnjigaOdabir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

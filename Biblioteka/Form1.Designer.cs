@@ -48,6 +48,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(38, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 13);
@@ -56,16 +57,23 @@
             // 
             // btnPretrazi
             // 
+            this.btnPretrazi.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnPretrazi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPretrazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPretrazi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPretrazi.Location = new System.Drawing.Point(212, 37);
             this.btnPretrazi.Name = "btnPretrazi";
             this.btnPretrazi.Size = new System.Drawing.Size(75, 23);
             this.btnPretrazi.TabIndex = 2;
             this.btnPretrazi.Text = "Pretraži:";
-            this.btnPretrazi.UseVisualStyleBackColor = true;
+            this.btnPretrazi.UseVisualStyleBackColor = false;
             this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
             // 
             // pnlForm
             // 
+            this.pnlForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlForm.Location = new System.Drawing.Point(29, 92);
             this.pnlForm.Name = "pnlForm";
             this.pnlForm.Size = new System.Drawing.Size(746, 486);
@@ -73,48 +81,67 @@
             // 
             // btnSpremi
             // 
+            this.btnSpremi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSpremi.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnSpremi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSpremi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnSpremi.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSpremi.Location = new System.Drawing.Point(607, 37);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(75, 23);
             this.btnSpremi.TabIndex = 4;
             this.btnSpremi.Text = "Spremi";
-            this.btnSpremi.UseVisualStyleBackColor = true;
+            this.btnSpremi.UseVisualStyleBackColor = false;
             this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
             // 
             // btnUcitaj
             // 
+            this.btnUcitaj.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUcitaj.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnUcitaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUcitaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnUcitaj.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnUcitaj.Location = new System.Drawing.Point(688, 38);
             this.btnUcitaj.Name = "btnUcitaj";
             this.btnUcitaj.Size = new System.Drawing.Size(75, 23);
             this.btnUcitaj.TabIndex = 5;
             this.btnUcitaj.Text = "Učitaj";
-            this.btnUcitaj.UseVisualStyleBackColor = true;
+            this.btnUcitaj.UseVisualStyleBackColor = false;
             this.btnUcitaj.Click += new System.EventHandler(this.btnUcitaj_Click);
             // 
             // btnStvori
             // 
+            this.btnStvori.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnStvori.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStvori.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnStvori.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnStvori.Location = new System.Drawing.Point(306, 37);
             this.btnStvori.Name = "btnStvori";
             this.btnStvori.Size = new System.Drawing.Size(75, 23);
             this.btnStvori.TabIndex = 6;
             this.btnStvori.Text = "Stvori";
-            this.btnStvori.UseVisualStyleBackColor = true;
+            this.btnStvori.UseVisualStyleBackColor = false;
             this.btnStvori.Click += new System.EventHandler(this.btnStvori_Click);
             // 
             // btnPodigni
             // 
+            this.btnPodigni.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnPodigni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPodigni.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnPodigni.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnPodigni.Location = new System.Drawing.Point(401, 37);
             this.btnPodigni.Name = "btnPodigni";
             this.btnPodigni.Size = new System.Drawing.Size(75, 23);
             this.btnPodigni.TabIndex = 7;
             this.btnPodigni.Text = "Podigni";
-            this.btnPodigni.UseVisualStyleBackColor = true;
+            this.btnPodigni.UseVisualStyleBackColor = false;
             this.btnPodigni.Click += new System.EventHandler(this.btnPodigni_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 613);
             this.Controls.Add(this.btnPodigni);
             this.Controls.Add(this.btnStvori);
