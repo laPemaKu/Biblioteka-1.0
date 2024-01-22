@@ -111,10 +111,6 @@ namespace Biblioteka
         {
             knjige_ = form.Knjige_list;
             forma_stvori = form;
-            foreach (knjiga knj in form.Knjige_list)
-            {
-                txtKnj.AppendText(knj.Naziv);
-            }
         }
         private List<knjiga> SyncLists()
         {
@@ -131,6 +127,12 @@ namespace Biblioteka
             }
 
             return knjige_main;
+        }
+
+        private void btnPodigni_Click(object sender, EventArgs e)
+        {
+            podizanjeKnjige forma = new podizanjeKnjige(this);
+            openForm(forma);
         }
     }
 }

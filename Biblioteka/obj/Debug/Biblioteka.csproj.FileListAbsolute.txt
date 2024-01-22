@@ -42,3 +42,5 @@ C:\Users\Ucenik\Documents\Petra\Biblioteka-1.0-main\Biblioteka\obj\Debug\Bibliot
 C:\Users\Ucenik\Documents\Petra\Biblioteka-1.0-main\Biblioteka\obj\Debug\Biblioteka.csproj.CoreCompileInputs.cache
 C:\Users\Ucenik\Documents\Petra\Biblioteka-1.0-main\Biblioteka\obj\Debug\Biblioteka.exe
 C:\Users\Ucenik\Documents\Petra\Biblioteka-1.0-main\Biblioteka\obj\Debug\Biblioteka.pdb
+C:\Users\Ucenik\Documents\Petra\Biblioteka-1.0-main\Biblioteka\obj\Debug\Biblioteka.AccountF.resources
+C:\Users\Ucenik\Documents\Petra\Biblioteka-1.0-main\Biblioteka\obj\Debug\Biblioteka.KnjigaOdabir.resources

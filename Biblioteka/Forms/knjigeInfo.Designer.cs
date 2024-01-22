@@ -158,6 +158,7 @@
             this.btnPodizanjeKnjige.Text = "Podizanje knjige";
             this.btnPodizanjeKnjige.UseVisualStyleBackColor = true;
             this.btnPodizanjeKnjige.Visible = false;
+            this.btnPodizanjeKnjige.Click += new System.EventHandler(this.btnPodizanjeKnjige_Click);
             // 
             // btnVracanjeKnjige
             // 

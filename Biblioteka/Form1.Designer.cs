@@ -35,7 +35,7 @@
             this.btnSpremi = new System.Windows.Forms.Button();
             this.btnUcitaj = new System.Windows.Forms.Button();
             this.btnStvori = new System.Windows.Forms.Button();
-            this.txtKnj = new System.Windows.Forms.TextBox();
+            this.btnPodigni = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtISBN
@@ -101,21 +101,22 @@
             this.btnStvori.UseVisualStyleBackColor = true;
             this.btnStvori.Click += new System.EventHandler(this.btnStvori_Click);
             // 
-            // txtKnj
+            // btnPodigni
             // 
-            this.txtKnj.Location = new System.Drawing.Point(396, 12);
-            this.txtKnj.Multiline = true;
-            this.txtKnj.Name = "txtKnj";
-            this.txtKnj.Size = new System.Drawing.Size(193, 62);
-            this.txtKnj.TabIndex = 7;
-            this.txtKnj.Visible = false;
+            this.btnPodigni.Location = new System.Drawing.Point(401, 37);
+            this.btnPodigni.Name = "btnPodigni";
+            this.btnPodigni.Size = new System.Drawing.Size(75, 23);
+            this.btnPodigni.TabIndex = 7;
+            this.btnPodigni.Text = "Podigni";
+            this.btnPodigni.UseVisualStyleBackColor = true;
+            this.btnPodigni.Click += new System.EventHandler(this.btnPodigni_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 613);
-            this.Controls.Add(this.txtKnj);
+            this.Controls.Add(this.btnPodigni);
             this.Controls.Add(this.btnStvori);
             this.Controls.Add(this.btnUcitaj);
             this.Controls.Add(this.btnSpremi);
@@ -139,7 +140,7 @@
         private System.Windows.Forms.Button btnSpremi;
         private System.Windows.Forms.Button btnUcitaj;
         private System.Windows.Forms.Button btnStvori;
-        private System.Windows.Forms.TextBox txtKnj;
+        private System.Windows.Forms.Button btnPodigni;
     }
 }
 

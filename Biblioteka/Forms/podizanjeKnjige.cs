@@ -12,10 +12,22 @@ namespace Biblioteka
 {
     public partial class podizanjeKnjige : childForm
     {
-        public podizanjeKnjige()
+        Form1 form;
+        public podizanjeKnjige(Form1 forma)
         {
             InitializeComponent();
-            dtpZavrsnoVrijeme.Value = dtpPocetnoVrijeme.Value.AddDays(7);
+            form = forma;
+        }
+
+        private void btnOdabir_Click(object sender, EventArgs e)
+        {
+
+            KnjigaOdabir fomr;
+        }
+
+        private void dtpPocetnoVrijeme_ValueChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -37,9 +37,18 @@ namespace Biblioteka
                     txtPisac.Text = knjiga.Pisac;
                     txtBrojKnjiga.Text = knjiga.Broj_kopija + "";
                     txtISBN.Text = knjiga.Isbn + "";
-                    break;
+                    if (knjiga.Broj_kopija>0)
+                    {
+                                            
+                    }
+                        break;
                 }
             }
+        }
+
+        private void btnPodizanjeKnjige_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -29,73 +29,37 @@
         private void InitializeComponent()
         {
             this.Ime = new System.Windows.Forms.Label();
-            this.txtIme = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtPrezime = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBroj = new System.Windows.Forms.TextBox();
+            this.txtEMail = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dtpPocetnoVrijeme = new System.Windows.Forms.DateTimePicker();
-            this.dtpZavrsnoVrijeme = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnPodigni = new System.Windows.Forms.Button();
+            this.btnOdabir = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.calPocetno = new System.Windows.Forms.MonthCalendar();
+            this.calZavrsno = new System.Windows.Forms.MonthCalendar();
             this.SuspendLayout();
             // 
             // Ime
             // 
             this.Ime.AutoSize = true;
-            this.Ime.Location = new System.Drawing.Point(93, 69);
+            this.Ime.Location = new System.Drawing.Point(30, 62);
             this.Ime.Name = "Ime";
-            this.Ime.Size = new System.Drawing.Size(27, 13);
+            this.Ime.Size = new System.Drawing.Size(35, 13);
             this.Ime.TabIndex = 3;
-            this.Ime.Text = "Ime:";
+            this.Ime.Text = "E-mail";
             // 
-            // txtIme
+            // txtEMail
             // 
-            this.txtIme.Location = new System.Drawing.Point(84, 89);
-            this.txtIme.Name = "txtIme";
-            this.txtIme.ReadOnly = true;
-            this.txtIme.Size = new System.Drawing.Size(167, 20);
-            this.txtIme.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(477, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Prezime";
-            // 
-            // txtPrezime
-            // 
-            this.txtPrezime.Location = new System.Drawing.Point(468, 89);
-            this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.ReadOnly = true;
-            this.txtPrezime.Size = new System.Drawing.Size(167, 20);
-            this.txtPrezime.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(477, 185);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Mobilni broj:";
-            // 
-            // txtBroj
-            // 
-            this.txtBroj.Location = new System.Drawing.Point(468, 205);
-            this.txtBroj.Name = "txtBroj";
-            this.txtBroj.ReadOnly = true;
-            this.txtBroj.Size = new System.Drawing.Size(167, 20);
-            this.txtBroj.TabIndex = 6;
+            this.txtEMail.Location = new System.Drawing.Point(21, 82);
+            this.txtEMail.Name = "txtEMail";
+            this.txtEMail.Size = new System.Drawing.Size(167, 20);
+            this.txtEMail.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(92, 186);
+            this.label3.Location = new System.Drawing.Point(12, 219);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 13);
             this.label3.TabIndex = 9;
@@ -104,53 +68,88 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(83, 170);
+            this.label4.Location = new System.Drawing.Point(78, 139);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Posuđivanje:";
             // 
-            // dtpPocetnoVrijeme
-            // 
-            this.dtpPocetnoVrijeme.Location = new System.Drawing.Point(83, 202);
-            this.dtpPocetnoVrijeme.Name = "dtpPocetnoVrijeme";
-            this.dtpPocetnoVrijeme.Size = new System.Drawing.Size(134, 20);
-            this.dtpPocetnoVrijeme.TabIndex = 11;
-            // 
-            // dtpZavrsnoVrijeme
-            // 
-            this.dtpZavrsnoVrijeme.Location = new System.Drawing.Point(273, 202);
-            this.dtpZavrsnoVrijeme.Name = "dtpZavrsnoVrijeme";
-            this.dtpZavrsnoVrijeme.Size = new System.Drawing.Size(134, 20);
-            this.dtpZavrsnoVrijeme.TabIndex = 13;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(282, 186);
+            this.label5.Location = new System.Drawing.Point(249, 155);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(24, 13);
             this.label5.TabIndex = 12;
             this.label5.Text = "Do:";
+            // 
+            // btnPodigni
+            // 
+            this.btnPodigni.Location = new System.Drawing.Point(532, 369);
+            this.btnPodigni.Name = "btnPodigni";
+            this.btnPodigni.Size = new System.Drawing.Size(75, 23);
+            this.btnPodigni.TabIndex = 15;
+            this.btnPodigni.Text = "Podigni";
+            this.btnPodigni.UseVisualStyleBackColor = true;
+            // 
+            // btnOdabir
+            // 
+            this.btnOdabir.Location = new System.Drawing.Point(210, 79);
+            this.btnOdabir.Name = "btnOdabir";
+            this.btnOdabir.Size = new System.Drawing.Size(106, 23);
+            this.btnOdabir.TabIndex = 16;
+            this.btnOdabir.Text = "Odabir knjiga";
+            this.btnOdabir.UseVisualStyleBackColor = true;
+            this.btnOdabir.Click += new System.EventHandler(this.btnOdabir_Click);
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(491, 137);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(227, 202);
+            this.listView1.TabIndex = 17;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // calPocetno
+            // 
+            this.calPocetno.Location = new System.Drawing.Point(7, 177);
+            this.calPocetno.Name = "calPocetno";
+            this.calPocetno.TabIndex = 18;
+            // 
+            // calZavrsno
+            // 
+            this.calZavrsno.Location = new System.Drawing.Point(252, 177);
+            this.calZavrsno.Name = "calZavrsno";
+            this.calZavrsno.TabIndex = 19;
             // 
             // podizanjeKnjige
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 447);
-            this.Controls.Add(this.dtpZavrsnoVrijeme);
+            this.Controls.Add(this.calZavrsno);
+            this.Controls.Add(this.calPocetno);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.btnOdabir);
+            this.Controls.Add(this.btnPodigni);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dtpPocetnoVrijeme);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtBroj);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtPrezime);
             this.Controls.Add(this.Ime);
-            this.Controls.Add(this.txtIme);
+            this.Controls.Add(this.txtEMail);
             this.Name = "podizanjeKnjige";
             this.Text = "podizanjeKnjige";
+            this.Controls.SetChildIndex(this.txtEMail, 0);
+            this.Controls.SetChildIndex(this.Ime, 0);
+            this.Controls.SetChildIndex(this.label3, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.btnPodigni, 0);
+            this.Controls.SetChildIndex(this.btnOdabir, 0);
+            this.Controls.SetChildIndex(this.listView1, 0);
+            this.Controls.SetChildIndex(this.calPocetno, 0);
+            this.Controls.SetChildIndex(this.calZavrsno, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,15 +158,14 @@
         #endregion
 
         private System.Windows.Forms.Label Ime;
-        private System.Windows.Forms.TextBox txtIme;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPrezime;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBroj;
+        private System.Windows.Forms.TextBox txtEMail;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dtpPocetnoVrijeme;
-        private System.Windows.Forms.DateTimePicker dtpZavrsnoVrijeme;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnPodigni;
+        private System.Windows.Forms.Button btnOdabir;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.MonthCalendar calPocetno;
+        private System.Windows.Forms.MonthCalendar calZavrsno;
     }
 }
