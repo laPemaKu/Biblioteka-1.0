@@ -98,6 +98,7 @@ namespace Biblioteka
                     }
                 }
             }
+            knjige_main = this.SyncLists();
         }
 
         private void btnStvori_Click(object sender, EventArgs e)
@@ -131,6 +132,7 @@ namespace Biblioteka
 
         private void btnPodigni_Click(object sender, EventArgs e)
         {
+            knjige_main = this.SyncLists();
             podizanjeKnjige forma = new podizanjeKnjige(this);
             openForm(forma);
         }

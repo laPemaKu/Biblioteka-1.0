@@ -35,10 +35,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnPodigni = new System.Windows.Forms.Button();
             this.btnOdabir = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.calPocetno = new System.Windows.Forms.MonthCalendar();
             this.calZavrsno = new System.Windows.Forms.MonthCalendar();
             this.label1 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // Ime
@@ -109,22 +109,13 @@
             this.btnOdabir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdabir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnOdabir.ForeColor = System.Drawing.Color.White;
-            this.btnOdabir.Location = new System.Drawing.Point(210, 79);
+            this.btnOdabir.Location = new System.Drawing.Point(217, 82);
             this.btnOdabir.Name = "btnOdabir";
             this.btnOdabir.Size = new System.Drawing.Size(106, 23);
             this.btnOdabir.TabIndex = 16;
             this.btnOdabir.Text = "Odabir knjiga";
             this.btnOdabir.UseVisualStyleBackColor = false;
             this.btnOdabir.Click += new System.EventHandler(this.btnOdabir_Click);
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(491, 137);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(227, 202);
-            this.listView1.TabIndex = 17;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // calPocetno
             // 
@@ -149,15 +140,23 @@
             this.label1.TabIndex = 20;
             this.label1.Text = "Od:";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(508, 155);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(200, 186);
+            this.listBox1.TabIndex = 21;
+            // 
             // podizanjeKnjige
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 447);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.calZavrsno);
             this.Controls.Add(this.calPocetno);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnOdabir);
             this.Controls.Add(this.btnPodigni);
             this.Controls.Add(this.label5);
@@ -174,10 +173,10 @@
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.btnPodigni, 0);
             this.Controls.SetChildIndex(this.btnOdabir, 0);
-            this.Controls.SetChildIndex(this.listView1, 0);
             this.Controls.SetChildIndex(this.calPocetno, 0);
             this.Controls.SetChildIndex(this.calZavrsno, 0);
             this.Controls.SetChildIndex(this.label1, 0);
+            this.Controls.SetChildIndex(this.listBox1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,9 +191,9 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnPodigni;
         private System.Windows.Forms.Button btnOdabir;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.MonthCalendar calPocetno;
         private System.Windows.Forms.MonthCalendar calZavrsno;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
