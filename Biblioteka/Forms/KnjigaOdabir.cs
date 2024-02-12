@@ -13,36 +13,32 @@ namespace Biblioteka
     public partial class KnjigaOdabir : childForm
     {
         Form1 forma;
-        List<knjiga> lista;
+        List<knjiga> lista = new List<knjiga>();
         string emailk;
         List<string> lista_knj = new List<string>();
-        public KnjigaOdabir(Form1 form, string email)
+        public KnjigaOdabir(Form1 form, string email, podizanjeKnjige podiza)
         {
             InitializeComponent();
             forma = form;
             lista = forma.knjige_main;
+            lista_knj = podiza.list_knj;
             emailk = email;
-            foreach (knjiga i in lista)
+            foreach (string i in lista_knj)
             {
-                if (i.Broj_kopija > 0)
-                {
-                    listBox1.Items.Add(i.Naziv + "\t\t" + i.Broj_kopija);
-                }
+                listBox1.Items.Add(i);
             }
         }
-        public KnjigaOdabir(Form1 form, string email, List<string> lista_Knjiga)
+        public KnjigaOdabir(Form1 form, string email, List<string> lista_Knjiga, podizanjeKnjige podiza)
         {
             InitializeComponent();
             forma = form;
             lista = forma.knjige_main;
+
             emailk = email;
             lista_knj = lista_Knjiga;
-            foreach (knjiga i in lista)
+            foreach (string i in lista_knj)
             {
-                if (i.Broj_kopija > 0)
-                {
-                    listBox1.Items.Add(i.Naziv + "\t\t" + i.Broj_kopija);
-                }
+                listBox1.Items.Add(i);
             }
         }
 
@@ -86,8 +82,12 @@ namespace Biblioteka
             }
             podizanjeKnjige pod = new podizanjeKnjige(forma, emailk, lista_knj);
             forma.openForm(pod);
-
         }
-        
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            podizanjeKnjige pod = new podizanjeKnjige(forma, emailk, lista_knj);
+            forma.openForm(pod);
+        }
     }
 }

@@ -50,5 +50,10 @@ namespace Biblioteka
         {
 
         }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

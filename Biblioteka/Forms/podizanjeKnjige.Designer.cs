@@ -39,6 +39,7 @@
             this.calZavrsno = new System.Windows.Forms.MonthCalendar();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Ime
@@ -147,12 +148,28 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(200, 186);
             this.listBox1.TabIndex = 21;
+            this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnBack.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(23, 23);
+            this.btnBack.TabIndex = 22;
+            this.btnBack.Text = "<";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
             // podizanjeKnjige
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 447);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.calZavrsno);
@@ -166,17 +183,6 @@
             this.Controls.Add(this.txtEMail);
             this.Name = "podizanjeKnjige";
             this.Text = "podizanjeKnjige";
-            this.Controls.SetChildIndex(this.txtEMail, 0);
-            this.Controls.SetChildIndex(this.Ime, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.btnPodigni, 0);
-            this.Controls.SetChildIndex(this.btnOdabir, 0);
-            this.Controls.SetChildIndex(this.calPocetno, 0);
-            this.Controls.SetChildIndex(this.calZavrsno, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.listBox1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +201,6 @@
         private System.Windows.Forms.MonthCalendar calZavrsno;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnBack;
     }
 }

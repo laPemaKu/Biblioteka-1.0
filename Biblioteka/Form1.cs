@@ -81,6 +81,10 @@ namespace Biblioteka
 
         private void btnUcitaj_Click(object sender, EventArgs e)
         {
+            knjige_list = new List<knjiga>();
+            knjige_ = new List<knjiga>();
+            knjige_main = new List<knjiga>();
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {

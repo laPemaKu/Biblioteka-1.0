@@ -41,6 +41,7 @@
             this.txtPisac = new System.Windows.Forms.TextBox();
             this.ISBN = new System.Windows.Forms.Label();
             this.txtISBN = new System.Windows.Forms.TextBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSpremi
@@ -166,11 +167,26 @@
             this.txtISBN.Size = new System.Drawing.Size(167, 20);
             this.txtISBN.TabIndex = 26;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnBack.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(23, 23);
+            this.btnBack.TabIndex = 39;
+            this.btnBack.Text = "<";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
+            // 
             // StvoriKnjigu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(730, 447);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtBrojKnjiga);
@@ -187,19 +203,6 @@
             this.Name = "StvoriKnjigu";
             this.Text = "StvoriKnjigu";
             this.Load += new System.EventHandler(this.StvoriKnjigu_Load);
-            this.Controls.SetChildIndex(this.txtISBN, 0);
-            this.Controls.SetChildIndex(this.ISBN, 0);
-            this.Controls.SetChildIndex(this.txtPisac, 0);
-            this.Controls.SetChildIndex(this.label1, 0);
-            this.Controls.SetChildIndex(this.txtIzdavac, 0);
-            this.Controls.SetChildIndex(this.label2, 0);
-            this.Controls.SetChildIndex(this.txtGodinaIzdavanja, 0);
-            this.Controls.SetChildIndex(this.label3, 0);
-            this.Controls.SetChildIndex(this.txtNaziv, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.txtBrojKnjiga, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.btnSpremi, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +223,6 @@
         private System.Windows.Forms.TextBox txtPisac;
         private System.Windows.Forms.Label ISBN;
         private System.Windows.Forms.TextBox txtISBN;
+        private System.Windows.Forms.Button btnBack;
     }
 }
